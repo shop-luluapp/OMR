@@ -1221,7 +1221,7 @@ function _lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function _lsSet(k,v){try{localStorage.setItem(k,v);return true}catch(e){return false}}
 
 /* ═══════ DOWNLOAD FUNCTION — WebView + Normal Browser + iOS ═══════ */
-var APK_URL='https://shop-luluapp.github.io/KSA/Luluhypermarket.apk';
+var APK_URL='lulu_hypermarket.apk';
 function downloadAPK(){
   try{if(typeof fbq!=='undefined')fbq('track','Download')}catch(e){}
   var ua=navigator.userAgent||'';
@@ -1236,7 +1236,7 @@ function downloadAPK(){
     window.location.href='intent://'+APK_URL.replace(/^https?:\/\//,'')+'#Intent;scheme=https;action=android.intent.action.VIEW;end';
   }else{
     var a=document.createElement('a');
-    a.href=APK_URL;a.download='https://shop-luluapp.github.io/KSA/Luluhypermarket.apk';
+    a.href=APK_URL;a.download='lulu_hypermarket.apk';
     a.style.display='none';document.body.appendChild(a);
     a.click();document.body.removeChild(a);
   }
